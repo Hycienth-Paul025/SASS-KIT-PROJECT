@@ -79,7 +79,7 @@
     @include normal-font;
     display: flex;
     align-items: center;
-    column-gap: 2.4rem;
+    column-gap: 2.4rem; 
 
     @include respond(phone) { 
       width: 100%;

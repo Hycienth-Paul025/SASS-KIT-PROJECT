@@ -1,0 +1,49 @@
+.intuitive{
+    
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    #200d42 20%,
+    #200d42 34%,
+    #4f21a1 65%,
+    #a46edb 82%
+
+  );
+
+@include primary-pad-block;
+
+&-content{
+  padding-inline: 1.6rem;
+}
+
+&-description{
+  @include normal-font;
+  text-align: center;
+  width: 33%;
+  margin: 0 auto;
+  padding-top: 2rem;
+
+
+     @include respond(tab-port-md) {
+    width: 49%;
+    }
+}
+
+
+&-img{
+  display: block;
+  margin: 0 auto;
+padding-top: 5.6rem;
+
+width: 99.2rem;
+
+
+   @include respond(tab-port-md) {
+      width: 99%;
+    }
+
+
+
+}
+
+}

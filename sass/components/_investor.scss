@@ -1,0 +1,29 @@
+.investor {
+  background: $color-black;
+  @include primary-pad;
+
+  &-text{
+    @include bg-norm-font;
+    
+  }
+
+  &-images {
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 6.4rem;
+    padding-top: 3.6rem;
+
+
+
+       @include respond(tab-port-md) {
+        display: grid;
+      grid-template-columns: repeat( auto-fit, minmax(14rem, 15rem) );
+      grid-row-gap: 5rem;
+    }
+
+    &  > * {
+      width: 13.8rem;
+    }
+  }
+}

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sass Kit</title>
+    <!-- css Link -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/logosass.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-logo">
+        <img
+          src="img/logosass.png"
+          alt="website logo"
+          class="navbar-logo-img"
+        />
+      </div>
+      <!--  navbar overlay -->
+
+      <div class="navbar-overlay"></div>
+
+      <div class="navbar-container">
+        <nav class="navbar-nav">
+          <ul class="navbar-items">
+            <li class="navbar-list">
+              <a href="#" class="navbar-link">About</a>
+            </li>
+
+            <li class="navbar-list">
+              <a href="#" class="navbar-link">Features</a>
+            </li>
+
+            <li class="navbar-list">
+              <a href="#" class="navbar-link">Updates</a>
+            </li>
+
+            <li class="navbar-list">
+              <a href="#" class="navbar-link">Help</a>
+            </li>
+
+            <li class="navbar-list">
+              <a href="#" class="navbar-link">Customers</a>
+            </li>
+
+            <li class="navbar-list">
+              <a href="#" class="navbar-link active-btn">Get for free</a>
+            </li>
+          </ul>
+
+          <svg class="navbar-icon close">
+            <use xlink:href="img/sprite.svg#icon-cross"></use>
+          </svg>
+        </nav>
+
+      </div>
+
+      
+      <svg class="navbar-icon open">
+        <use xlink:href="img/sprite.svg#icon-menu "></use>
+      </svg>
+    </div>
+
+    <!-- HEADER -->
+
+    <header class="header">
+      <div class="header-text">
+        <p class="version-text">Version 2.0 is here</p>
+
+        <div class="header-btn">
+          <a href="#" class="header-link">Read More</a>
+          <img src="img/arrow-right.svg" alt="btn-icon" />
+        </div>
+      </div>
+
+      <h1 class="primary-heading">
+        One Task <br />
+        at a Time
+      </h1>
+
+      <p class="header-description">
+        Celebrate the joy of accomplishment with an app designed to track your
+        progress, motivate your efforts, and celebrate your successes.
+      </p>
+
+      <a class="active-btn">Get for free</a>
+
+      <img src="img/cursor-1.png" alt="cursor" class="header-cursor" />
+
+      <img src="img/message-1.png" alt="message" class="header-message" />
+
+      <!--  Workinfg on it
+<div class="header-eclipse">
+  
+</div> -->
+    </header>
+
+    <!-- INVESTORS -->
+
+    <div class="investor">
+      <p class="investor-text">Trusted by the world's most innovative teams</p>
+
+      <div class="investor-images">
+        <img src="img/acme-corp.png" alt="Acme Corp" class="investor-img-1" />
+        <img src="img/quantum.png" alt="Quantum " class="investor-img-2" />
+        <img
+          src="img/echo-valley.png"
+          alt="Echo Valley "
+          class="investor-img-3"
+        />
+        <img src="img/celestial.png" alt="Celestial " class="investor-img-4" />
+        <img src="img/pulse.png" alt="Pulse " class="investor-img-5" />
+      </div>
+    </div>
+
+    <!-- CARDS -->
+    <section class="card">
+      <h1 class="secondary-heading">Everything you need</h1>
+      <p class="card-description">
+        Enjoy customizable lists, team work tools, and smart tracking all in one
+        place. Set tasks, get reminders, and see your progress simply and
+        quickly.
+      </p>
+
+      <div class="card-container">
+        <!-- CARD 1 -->
+
+        <div class="card-item">
+          <div class="card-item-image">
+            <img src="img/box-1.svg" alt="box" class="card-item-img" />
+          </div>
+
+          <h6 class="card-item-heading">Intergratiom Ecosystem</h6>
+
+          <p class="card-item-text">
+            Enhance your productivity by connecting with your tools keeping your
+            essentials in one place
+          </p>
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="card-item">
+          <div class="card-item-image">
+            <img src="img/box-1.svg" alt="box" class="card-item-img" />
+          </div>
+
+          <h6 class="card-item-heading">Goal Setting and Tracking</h6>
+
+          <p class="card-item-text">
+            Define and track your goals, breaking down objectives into
+            achievable tasks to keep your targets in sight.
+          </p>
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="card-item">
+          <div class="card-item-image">
+            <img src="img/box-1.svg" alt="box" class="card-item-img" />
+          </div>
+
+          <h6 class="card-item-heading">Secure Data Encryption</h6>
+
+          <p class="card-item-text">
+            With end-to-end encryption, your data is securely stored and
+            protected from unauthorized access.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTUTIVE -->
+
+    <section class="intuitive">
+      <div class="intuitve-content">
+        <h1 class="secondary-heading">Intuitive interface</h1>
+
+        <p class="intuitive-description">
+          Celebrate the joy of accomplishment with an app designed to track your
+          progress, motivate your efforts, and celebrate your successes, one
+          task at a time.
+        </p>
+
+        <img
+          src="img/app-screen.png"
+          alt="intuitive image"
+          class="intuitive-img"
+        />
+      </div>
+    </section>
+
+    <!-- FAQ -->
+
+    <section class="faq">
+      <div class="faq-content">
+        <h1 class="secondary-heading">
+          Frequently asked <br />
+          questions
+        </h1>
+
+        <div class="faq-accordion-container">
+          <!-- First Accordion -->
+
+          <div class="faq-accordion">
+            <div class="faq-accordion-content" aria-expanded="false">
+              <div class="question">What payment methods do you accept?</div>
+              <div class="accordion-icon">
+                <svg class="plus">
+                  <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </svg>
+
+                <svg class="minus">
+                  <use xlink:href="img/sprite.svg#icon-minus"></use>
+                </svg>
+              </div>
+            </div>
+
+            <p class="answer">
+              Lorem ipsum Eius voluptates eum ut? Atque similique repellat
+              eveniet consequuntur soluta a accusantium excepturi illo enim fuga
+              aspernatur qui animi optio, vitae numquam.
+            </p>
+          </div>
+
+          <!-- Second Accordion -->
+
+          <div class="faq-accordion">
+            <div class="faq-accordion-content" aria-expanded="false">
+              <div class="question">How does the pricing work for teams?</div>
+              <div class="accordion-icon">
+                <svg class="plus">
+                  <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </svg>
+
+                <svg class="minus">
+                  <use xlink:href="img/sprite.svg#icon-minus"></use>
+                </svg>
+              </div>
+            </div>
+
+            <p class="answer">
+              Lorem ipsum Eius voluptates eum ut? Atque similique repellat
+              eveniet consequuntur soluta a accusantium excepturi illo enim fuga
+              aspernatur qui animi optio, vitae numquam.
+            </p>
+          </div>
+
+          <!-- third Accordion -->
+
+          <div class="faq-accordion">
+            <div class="faq-accordion-content" aria-expanded="false">
+              <div class="question">Can I change my plan later?</div>
+              <div class="accordion-icon">
+                <svg class="plus">
+                  <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </svg>
+
+                <svg class="minus">
+                  <use xlink:href="img/sprite.svg#icon-minus"></use>
+                </svg>
+              </div>
+            </div>
+
+            <p class="answer">
+              Lorem ipsum Eius voluptates eum ut? Atque similique repellat
+              eveniet consequuntur soluta a accusantium excepturi illo enim fuga
+              aspernatur qui animi optio, vitae numquam.
+            </p>
+          </div>
+
+          <!-- Fourth Accordion -->
+
+          <div class="faq-accordion">
+            <div class="faq-accordion-content" aria-expanded="false">
+              <div class="question">Is my data secure?</div>
+              <div class="accordion-icon">
+                <svg class="plus">
+                  <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </svg>
+
+                <svg class="minus">
+                  <use xlink:href="img/sprite.svg#icon-minus"></use>
+                </svg>
+              </div>
+            </div>
+
+            <p class="answer">
+              Lorem ipsum Eius voluptates eum ut? Atque similique repellat
+              eveniet consequuntur soluta a accusantium excepturi illo enim fuga
+              aspernatur qui animi optio, vitae numquam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact">
+      <div class="contact-content">
+        <h1 class="secondary-heading">Get instant access</h1>
+
+        <p class="contact-text">
+          Celebrate the joy of accomplishment with an app designed to track your
+          progress and motivate your efforts.
+        </p>
+
+        <form action="#" class="contact-form">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="name@gmail.com"
+            class="contact-form-input"
+          />
+          <button type="submit" class="active-btn">Get access</button>
+        </form>
+      </div>
+    </section>
+  </body>
+  <script src="js/script.js"></script>
+</html>

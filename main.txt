@@ -1,0 +1,72 @@
+
+Font-family
+ @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+ colorA46EDB
+ header-gradient
+
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    #200d42 20%,
+    #200d42 34%,
+    #4f21a1 65%,
+    #a46edb 82%,
+    #000 100%
+  );
+  
+  
+  text-gadient
+ background: linear-gradient(90deg, #F87AFF 0%, #FB93D0 25%, #FD9 50%, #C3F0B2 75%, #2FD8FE 100%);
+
+ #ffffff99;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sass/
+│
+├── abstracts/        // Sass helpers (functions, mixins, variables, etc.)
+│   ├── _variables.scss
+│   ├── _mixins.scss
+│   ├── _functions.scss
+│   └── _placeholders.scss
+│
+├── base/             // Base styles (reset, typography, global styles)
+│   ├── _reset.scss
+│   ├── _typography.scss
+│   └── _base.scss
+│
+├── components/       // Reusable UI components (buttons, cards, navbars)
+│   ├── _button.scss
+│   ├── _card.scss
+│   └── _navbar.scss
+│
+├── layout/           // Layout and structural parts (grid, header, footer)
+│   ├── _header.scss
+│   ├── _footer.scss
+│   ├── _grid.scss
+│   └── _sidebar.scss
+│
+├── pages/            // Page-specific styles
+│   ├── _home.scss
+│   ├── _about.scss
+│   └── _contact.scss
+│
+├── themes/           // Theme files (dark mode, color themes)
+│   └── _theme.scss
+│
+│
+└── main.scss         // The only file compiled to CSS; imports all others

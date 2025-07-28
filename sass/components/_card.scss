@@ -1,0 +1,61 @@
+.card {
+  background: $color-black;
+  @include primary-pad-block;
+
+  &-description {
+    @include normal-font;
+    text-align: center;
+    margin: 0 auto;
+    width: 34%;
+    padding-top: 2rem;
+  }
+
+  &-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, max-content) );
+    grid-gap: 1.6rem; 
+    padding-top: 6.4rem;
+    padding-inline: 11.2rem;
+  }
+
+  &-item {
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 1.2rem;
+    border: 1px solid currentColor;
+
+
+    &-image {
+      width: 5.6rem;
+      height: 5.6rem;
+      background: $color-white;
+      display: flex;
+      justify-content: center;
+      justify-self: center;
+      align-items: center;
+      border-radius: 1.2rem;
+    }
+
+&-heading{
+    @include normal-font;
+    font-weight: 700;
+    color: #fff;
+    padding-top: 2.4rem;
+  }
+
+
+  &-text{
+    @include normal-font;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: .8rem;
+  }
+
+
+  }
+
+
+  
+
+}

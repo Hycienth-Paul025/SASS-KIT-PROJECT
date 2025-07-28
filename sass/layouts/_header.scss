@@ -1,0 +1,181 @@
+.header {
+  position: relative;
+  @include primary-pad;
+  @include normal-font;
+  text-align: center;
+
+  background: radial-gradient(
+      60% 50% at 50% 133%,
+      #000 0%,
+      #000 82%,
+      #9560eb00 100%
+    ),
+    linear-gradient(
+      180deg,
+      #000000 0%,
+      #200d42 20%,
+      #200d42 34%,
+      #4f21a1 65%,
+      #a46edb 82%,
+      #000 100%
+    );
+
+    @include respond (phone){
+      padding-top: 15rem;
+    }
+
+  @include respond(tab-port) {
+    overflow: hidden;
+  }
+
+  &-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    column-gap: 1.2rem;
+    width: fit-content;
+    margin: 0 auto;
+    padding-inline: 1rem;
+    border-radius: 1rem;
+    border: 1px solid $color-text;
+
+    & .version-text {
+      background: linear-gradient(
+        90deg,
+        #f87aff 0%,
+        #fb93d0 25%,
+        #fd9 50%,
+        #c3f0b2 75%,
+        #2fd8fe 100%
+      );
+      background-clip: text;
+      color: transparent;
+    }
+  }
+
+  &-btn {
+    display: flex;
+    column-gap: 0.4rem;
+
+    & .header-link {
+      background-color: transparent;
+      color: $color-white;
+      outline: none;
+      border: none;
+    }
+  }
+
+  & h1 {
+    padding-block: 3.2rem;
+  }
+
+  &-description {
+    @include bg-norm-font;
+    text-align: center;
+    width: 33%;
+    margin: 0 auto;
+    padding-bottom: 3.2rem;
+
+    @include respond(tab-land) {
+      width: 50%;
+    }
+
+    @include respond(tab-port) {
+      width: 60%;
+    }
+  }
+
+  /* FLoating Image */
+
+  &-cursor {
+    width: 20rem;
+    position: absolute;
+    left: 19%;
+    top: 40%;
+
+    @include respond(tab-land) {
+      left: 19%;
+      top: 35%;
+    }
+
+    @include respond(tab-port-md) {
+      left: 12%;
+      top: 35%;
+    }
+
+    @include respond(tab-port) {
+      left: -3%;
+      top: 40%;
+    }
+  }
+
+  &-message {
+    width: 20rem;
+    position: absolute;
+    top: 33%;
+    right: 17%;
+
+    @include respond(tab-land) {
+      top: 30%;
+      right: 15%;
+    }
+
+    @include respond(tab-port-md) {
+      right: 10%;
+      top: 33%;
+    }
+
+    @include respond(tab-port) {
+      right: -10%;
+      top: 35%;
+    }
+  }
+
+  &-cursor,
+  &-message {
+    @include respond(phone) {
+      display: none;
+    }
+
+    @include respond(tab-port) {
+      width: 15rem;
+      // height: ;
+    }
+  }
+
+  /* 
+  &-eclipse {
+    width: 100%;
+    height: 50rem;
+    float: left;
+    border-radius: 50%;
+    border: 1px solid #b48cde;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #000 0%,
+      #000 82%,
+      #9560eb 100%
+    );
+    box-shadow: 0 4px 4px 0 #00000040;
+  } */
+}
+/* 
+
+@media(max-width: 68.75em){
+
+.header-cursor, .header-message{
+  width: 15rem;
+}
+
+.header-cursor{
+  top: 40%;
+  left: 15%;
+}
+
+.header-message{
+  top: 35%;
+}
+
+
+} */

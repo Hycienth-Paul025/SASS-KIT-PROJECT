@@ -1,0 +1,83 @@
+@mixin normal-font {
+  font-size: 1.6rem;
+}
+
+@mixin bg-norm-font {
+  font-size: 2rem;
+  text-align: center;
+}
+
+@mixin primary-pad {
+  padding: 9.6rem 1.6rem;
+}
+
+@mixin primary-pad-block {
+  padding-block: 9.6rem;
+}
+
+//// BREAKPOINT FOR MEDIA QUERIES
+
+//MEDIA QUERY MANAGEMENT
+
+/*  
+0 - 600PX : Mobile phone
+
+600 - 900px : Tablet portrait mode
+ 
+900 - 1200px : Tablet Landscape mode
+
+( 1200px - 1800px ) is where our normal styles apply
+
+1800px + :  Big Desktop Screen
+
+ 
+$breakpoint arguement choices:
+
+-phone
+- Tablet
+- tab-port
+-tab-land
+-big-desktop
+
+*/
+
+@mixin respond($breakpoint) {
+  
+  @if $breakpoint == phone {
+    @media screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+
+  @if $breakpoint == tab-port {
+    @media screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+
+
+  @if $breakpoint == tab-port-md {
+    @media screen and (max-width: 68.75em) {
+      @content;
+    }
+  }
+
+
+
+
+  @if $breakpoint == tab-land {
+    @media screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+
+  @if $breakpoint == big-desktop {
+    @media screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+  
+}

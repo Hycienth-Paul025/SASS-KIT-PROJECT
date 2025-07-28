@@ -1,0 +1,151 @@
+.navbar {
+  background: $color-black;
+  padding-inline: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8rem;
+
+  @include respond(phone) {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  // NAV LOGO
+
+  &-logo {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        89deg,
+        #f87bff 0.48%,
+        #fb92cf 24.31%,
+        #ffdd9b 48.21%,
+        #c2f0b1 72.62%,
+        #2fd8fe 99.52%
+      );
+      filter: blur(6px);
+      opacity: 0.8;
+      border-radius: 1.2rem;
+      z-index: -1;
+    }
+
+    &-img {
+      display: block;
+      width: 4.8rem;
+      height: 4.8rem;
+      border-radius: 1.2rem;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  // NAVGATION
+
+  &-container {
+    @include respond(phone) {
+      background: $color-black;
+      height: 80vh;
+      position: fixed;
+      top: 10%;
+      right: -100%;
+      width: 60%;
+      z-index: 5;
+      border-radius: 2rem 0 0 2rem;
+      box-shadow: -1rem 1rem 1.4rem #0c0c0c65;
+      transition: right .6s cubic-bezier(0.16, 1, 0.3, 1) ;
+    }
+  }
+
+
+  &-list {
+    &:not(:last-child):hover {
+      color: $color-white;
+    }
+  }
+
+  &-items {
+    @include normal-font;
+    display: flex;
+    align-items: center;
+    column-gap: 2.4rem;
+
+    @include respond(phone) { 
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 5rem;
+      padding-inline: 2rem;
+      padding-top: 35%;
+
+    }
+  }
+
+  &-link {
+    transition: color 0.2s ease;
+  }
+
+  &-icon {
+    fill: white;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 2.2rem;
+    display: none;
+cursor: pointer;
+   
+
+    &.close {
+
+      @include respond(phone) {
+        position: absolute;
+        right: -1rem;
+        top: 2rem;
+      }
+    }
+
+    @include respond(phone) {
+      display: block;
+    }
+  }
+
+////// NAVBAR OVERLAY
+
+
+
+&-overlay{
+
+
+  @include respond(phone){
+position: fixed;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+background: #c4c0c01f;
+backdrop-filter: blur(5px);
+z-index: 4;
+visibility: hidden;
+transition: .2s;
+  }
+}
+
+}
+
+.visible{
+  visibility: visible;
+}
+
+.slide-in{
+right: 0;
+}

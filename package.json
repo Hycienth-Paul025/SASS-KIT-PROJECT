@@ -8,7 +8,10 @@
     "watch:sass": "sass sass/main.scss css/style.css --watch",
     "prefix:css": "postcss css/style.css -o css/style.prefixed.css",
     "compress:css": "postcss css/style.prefixed.css -o css/style.min.css ",
-    "build:css": " npm-run-all compile:sass prefix:css compress:css"
+    "build:css": " npm-run-all compile:sass prefix:css compress:css",
+     "watch:css": "npm-run-all --parallel watch:sass watch:postcss",
+  "watch:postcss": "postcss css/style.css -o css/style.prefixed.css --watch"
+
   },
   "author": "hycienth paul",
   "license": "ISC",

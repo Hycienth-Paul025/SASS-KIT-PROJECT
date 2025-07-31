@@ -6,8 +6,13 @@
     @include normal-font;
     text-align: center;
     margin: 0 auto;
-    width: 34%;
+    width: 45%;
     padding-top: 2rem;
+
+
+     @include respond(tab-port){
+      width: 50%;
+    }
   }
 
   &-container {
@@ -22,7 +27,7 @@
   &-item {
     padding: 4rem 2rem;
     text-align: center;
-    border-radius: 1.2rem;
+    border-radius: .9rem;
     border: 1px solid currentColor;
 
 
@@ -34,7 +39,7 @@
       justify-content: center;
       justify-self: center;
       align-items: center;
-      border-radius: 1.2rem;
+      border-radius: .9rem;
     }
 
 &-heading{

@@ -1,37 +1,90 @@
 .faq {
-  background: linear-gradient(180deg, #a46edb 0%, #5d2ca8 50%, #000 100%);
+background: linear-gradient(180deg, $color-secondary 0%, $color-black 100%);
   @include primary-pad-block;
 
   &-content {
-    padding-inline: 1.6rem;
+    padding-inline: 1.6rem; 
   }
 
   &-accordion-container {
     padding-top: 4.8rem;
+     width: 50%;
+      margin: 0 auto;
+
+      
+@include respond (tab-port){
+  width: 100%;
+  padding-inline: 1.6rem
+}
+
   }
 
   &-accordion {
+
+
     &-content {
       position: relative;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding-block: 2.8rem;
-      width: 50%;
-      margin: 0 auto;
       cursor: pointer;
+      background:transparent;
+      border-bottom: .1rem solid currentColor;
 
-@include respond (phone){
-  width: 80%;
-}
 
     }
+
+    //Question
 
     & .question {
       color: $color-white;
       @include normal-font;
       font-weight: 700;
     }
+
+
+    // Answer
+
+    & .answer {
+      @include normal-font;
+     // text-align: center;
+     color: $color-white;
+     padding-top: 1rem;
+      padding-inline: 2rem;
+      font-weight: 500;
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+      transition: .2s;
+      will-change: height, opacity,visibility;
+
+      & .answer {
+      @include normal-font;
+     // text-align: center;
+     color: $color-white;
+     padding-top: 1rem;
+      padding-inline: 2rem;
+      font-weight: 500;
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+      transition: .2s;
+      will-change: height, opacity,visibility;
+
+
+      @include respond(tab-port){
+        width: 100%;
+      }
+
+
+      
+
+    }
+
+
+    }
+
 
     & .accordion-icon {
       position: relative;
@@ -41,6 +94,8 @@
         height: 2.4rem;
         fill: $color-white;
         position: absolute;
+        right: 0;
+        transform: translateY( -50%);
       }
 
       & .minus {
@@ -48,25 +103,7 @@
       }
     }
 
-    & .answer {
-      @include normal-font;
-     // text-align: center;
-      padding-inline: 2rem;
-      width: 50%;
-      margin: 0 auto;
-      font-weight: 500;
-      visibility: hidden;
-      opacity: 0;
-      height: 0;
-      transition: .2s;
-      will-change: height, opacity,visibility;
-
-
-      @include respond(phone){
-        width: 80%;
-      }
-
-    }
+    
 
     & .faq-accordion-content[aria-expanded="true"] .plus {
       display: none;

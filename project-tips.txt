@@ -55,3 +55,5 @@ inside  [ postcss.config.js ] paste this ⬇️👇 :
   "watch:css": "npm-run-all --parallel watch:sass watch:postcss",
   "watch:postcss": "postcss css/style.css -o css/style.prefixed.css --watch"
 }
+
+Then run npm run watch:css

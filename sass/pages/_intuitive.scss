@@ -1,14 +1,6 @@
 .intuitive{
     
-  background: linear-gradient(
-    180deg,
-    #000000 0%,
-    #200d42 20%,
-    #200d42 34%,
-    #4f21a1 65%,
-    #a46edb 82%
-
-  );
+ background: linear-gradient(180deg, $color-black 0%, $color-secondary 100%);
 
 @include primary-pad-block;
 
@@ -35,7 +27,7 @@
   margin: 0 auto;
 padding-top: 5.6rem;
 
-width: 99.2rem;
+width: 105.2rem;
 
 
    @include respond(tab-port-md) {

@@ -1,26 +1,45 @@
 .contact {
   background: $color-black;
   @include primary-pad-block;
+  position: relative;
+  overflow: hidden;
+
+  &-content {
+    padding-inline: 1rem;
+    width: 50%;
+    margin: 0 auto;
+
+     @include respond(tab-land){
+      width: 60%;
+    }
+
+    @include respond(phone){
+      width: 90%;
+      padding-inline: 1.6rem;
+    }
+  }
 
   &-text {
     padding-top: 2rem;
     @include bg-norm-font;
     text-align: center;
-    width: 34%;
-    margin: 0 auto;
-
-
-    @include respond (tab-port-md){
-      width: 80%;
-    }
-
+    width: 100%;
   }
+
 
   &-form {
     padding-top: 4rem;
     display: flex;
     justify-content: center;
     column-gap: 1rem;
+
+    
+@include respond(phone){
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+
 
     &-input {
       padding-inline: 2rem;
@@ -31,24 +50,75 @@
       color: $color-white;
       @include normal-font;
       font-family: inherit;
-      transition: .2s;
-          border-bottom: 3px solid transparent;
+      transition: 0.2s;
+      border-bottom: 3px solid transparent;
 
-&:focus{
-    border-bottom:  3px solid #c90700;
-}
+
+      &:focus {
+        border-bottom: 3px solid #f54235;
+      }
+
+
 
       &:focus:invalid {
         border-bottom: 3px solid #06cc06;
       }
 
+
       &::placeholder {
         @include normal-font;
       }
+
+
     }
 
     & button {
       cursor: pointer;
+    }
+  }
+
+
+
+  & img {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+
+    @include respond (phone){
+      display: none;
+    }
+  }
+
+  // setting emoji star
+
+  &-emoji {
+    top: 0rem;
+    left: 12rem;
+
+    @include respond(tab-port-md) {
+      left: 5rem;
+    }
+
+    @include respond(tab-port) {
+      left: -15rem;
+    }
+ @include respond(phone) {
+     display: none;
+    }
+
+  }
+
+  // setting image
+  &-setting {
+    top: 15rem;
+    right: 12rem;
+
+    @include respond(tab-port-md) {
+      right: 5rem;
+    }
+
+    @include respond(tab-port) {
+      right: -5rem;
     }
   }
 }

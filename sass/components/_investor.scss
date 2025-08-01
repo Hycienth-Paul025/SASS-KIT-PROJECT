@@ -28,12 +28,12 @@
 
     &::before {
       background: linear-gradient(to right, $color-black, transparent);
-      left: -2%;
+      left: -5%;
     }
 
     &::after {
      background: linear-gradient(to left, $color-black, transparent);
-      right: -2%;
+      right: -5%;
     }
   }
 

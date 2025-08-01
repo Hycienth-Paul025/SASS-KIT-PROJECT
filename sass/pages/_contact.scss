@@ -53,6 +53,10 @@
       transition: 0.2s;
       border-bottom: 3px solid transparent;
 
+      @include respond(tab-port){
+        padding: 1rem 2rem;
+      }
+
 
       &:focus {
         border-bottom: 3px solid #f54235;

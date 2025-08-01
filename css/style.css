@@ -309,7 +309,7 @@ body {
 }
 .investor-content {
   white-space: nowrap;
-  padding-block: 1.8rem;
+  padding-block: 3.6rem;
   position: relative;
 }
 .investor-content:hover .investor-images {
@@ -580,6 +580,11 @@ body {
   font-family: inherit;
   transition: 0.2s;
   border-bottom: 3px solid transparent;
+}
+@media screen and (max-width: 56.25em) {
+  .contact-form-input {
+    padding: 1rem 2rem;
+  }
 }
 .contact-form-input:focus {
   border-bottom: 3px solid #f54235;

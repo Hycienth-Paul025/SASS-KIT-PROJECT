@@ -301,29 +301,53 @@ body {
 .investor {
   background: #000;
   padding: 9.6rem 1.6rem;
+  overflow: hidden;
 }
 .investor-text {
   font-size: 2rem;
   text-align: center;
 }
-.investor-images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 6.4rem;
-  padding-top: 3.6rem;
+.investor-content {
+  white-space: nowrap;
+  padding-block: 1.8rem;
+  position: relative;
 }
-@media screen and (max-width: 68.75em) {
-  .investor-images {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 15rem));
-    grid-row-gap: 5rem;
-  }
+.investor-content:hover .investor-images {
+  animation-play-state: paused;
+}
+.investor-content::before, .investor-content::after {
+  content: "";
+  height: 100%;
+  width: 22rem;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+.investor-content::before {
+  background: linear-gradient(to right, #000, transparent);
+  left: -2%;
+}
+.investor-content::after {
+  background: linear-gradient(to left, #000, transparent);
+  right: -2%;
+}
+.investor-images {
+  display: inline-block;
+  animation: slide 15s linear infinite;
 }
 .investor-images > * {
   width: 13.8rem;
+  margin-inline: 6.4rem;
 }
 
+@keyframes slide {
+  from {
+    transform: transalteX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 /* LAYOUTS */
 .header {
   position: relative;

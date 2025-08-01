@@ -1,29 +1,63 @@
 .investor {
   background: $color-black;
   @include primary-pad;
+  overflow: hidden;
 
-  &-text{
+  &-text {
     @include bg-norm-font;
-    
+  }
+
+  &-content {
+    white-space: nowrap;
+    padding-block: 1.8rem;
+    position: relative;
+
+    &:hover .investor-images {
+      animation-play-state: paused;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      height: 100%;
+      width: 22rem;
+      position: absolute;
+      top: 0;
+      z-index: 2;
+    }
+
+    &::before {
+      background: linear-gradient(to right, $color-black, transparent);
+      left: -2%;
+    }
+
+    &::after {
+     background: linear-gradient(to left, $color-black, transparent);
+      right: -2%;
+    }
   }
 
   &-images {
-   display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 6.4rem;
-    padding-top: 3.6rem;
+    display: inline-block;
+    animation: slide 15s linear infinite;
 
-
-
-       @include respond(tab-port-md) {
-        display: grid;
-      grid-template-columns: repeat( auto-fit, minmax(14rem, 15rem) );
-      grid-row-gap: 5rem;
-    }
-
-    &  > * {
+    & > * {
       width: 13.8rem;
+      //height: 3.2rem;
+      margin-inline: 6.4rem;
     }
   }
 }
+
+@keyframes slide {
+  from {
+    transform: transalteX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+/// This is Carousel 

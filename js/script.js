@@ -64,3 +64,24 @@ function accordionEffect() {
 accordionToggle.forEach((item) => {
   item.addEventListener("click", accordionEffect);
 });
+
+
+////// HOW TO CREATE CAROOUSEL FUNCTION WITH JS WITHOUT DUPLICATION OR REPEATITION OF INVESTOR IMAGE
+
+
+/// Note that you must have your css styling already when doing this 
+/// you can as well do the duplication in the html for testing purpose to be sure of what ypure styling  
+
+
+const duplicate = document.querySelector(".investor-images").cloneNode(true);
+// this means duplicate or repeat this class eLement
+
+// make sure the cloneNode() value is set to true for proper cloning, repetition or duplication 
+
+
+parent= document.querySelector(".investor-content").appendChild(duplicate);
+// this means show the duplicated class element
+
+
+
+

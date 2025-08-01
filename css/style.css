@@ -184,14 +184,9 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 8rem;
-}
-@media screen and (max-width: 37.5em) {
-  .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-  }
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 .navbar-logo {
   display: inline-block;
@@ -222,9 +217,9 @@ body {
 @media screen and (max-width: 37.5em) {
   .navbar-container {
     background: #000;
-    height: 80vh;
+    height: 98vh;
     position: fixed;
-    top: 10%;
+    top: 2%;
     right: -100%;
     width: 60%;
     z-index: 5;
@@ -282,12 +277,17 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(196, 192, 192, 0.1215686275);
+    background: rgba(196, 196, 196, 0.1215686275);
     backdrop-filter: blur(5px);
     z-index: 4;
     visibility: hidden;
     transition: 0.2s;
   }
+}
+
+.sticky {
+  box-shadow: 0.1rem 0.5rem 3rem rgba(0, 0, 0, 0.9);
+  transition: 0.4s;
 }
 
 .visible {
@@ -324,16 +324,16 @@ body {
   z-index: 2;
 }
 .investor-content::before {
-  background: linear-gradient(to right, #000, transparent);
+  background: linear-gradient(to right, #000 50%, transparent);
   left: -5%;
 }
 .investor-content::after {
-  background: linear-gradient(to left, #000, transparent);
+  background: linear-gradient(to left, #000 50%, transparent);
   right: -5%;
 }
 .investor-images {
   display: inline-block;
-  animation: slide 15s linear infinite;
+  animation: slide 20s linear infinite;
 }
 .investor-images > * {
   width: 13.8rem;
@@ -646,9 +646,6 @@ body {
   background: linear-gradient(180deg, #5D2CA8 0%, #000 100%);
   padding-block: 9.6rem;
 }
-.faq-content {
-  padding-inline: 1.6rem;
-}
 .faq-accordion-container {
   padding-top: 4.8rem;
   width: 50%;
@@ -656,8 +653,7 @@ body {
 }
 @media screen and (max-width: 56.25em) {
   .faq-accordion-container {
-    width: 100%;
-    padding-inline: 1.6rem;
+    width: 97%;
   }
 }
 .faq-accordion-content {

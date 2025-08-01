@@ -29,19 +29,19 @@
     }
 
     &::before {
-      background: linear-gradient(to right, $color-black, transparent);
+      background: linear-gradient(to right, $color-black 50%, transparent);
       left: -5%;
     }
 
     &::after {
-     background: linear-gradient(to left, $color-black, transparent);
+     background: linear-gradient(to left, $color-black 50%, transparent);
       right: -5%;
     }
   }
 
   &-images {
     display: inline-block;
-    animation: slide 15s linear infinite;
+    animation: slide 20s linear infinite;
 
     & > * {
       width: 13.8rem;

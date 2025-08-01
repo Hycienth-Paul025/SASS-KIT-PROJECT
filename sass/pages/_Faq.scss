@@ -2,9 +2,7 @@
 background: linear-gradient(180deg, $color-secondary 0%, $color-black 100%);
   @include primary-pad-block;
 
-  &-content {
-    padding-inline: 1.6rem; 
-  }
+  
 
   &-accordion-container {
     padding-top: 4.8rem;
@@ -13,8 +11,8 @@ background: linear-gradient(180deg, $color-secondary 0%, $color-black 100%);
 
       
 @include respond (tab-port){
-  width: 100%;
-  padding-inline: 1.6rem
+  width: 97%;
+
 }
 
   }

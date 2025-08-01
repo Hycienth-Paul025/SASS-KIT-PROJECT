@@ -1,3 +1,19 @@
+//// NAVBAR SHADOW
+
+const Navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", ()=>{
+
+  window.scrollY >= 64 
+  ? Navbar.classList.add("sticky")
+ :Navbar.classList.remove("sticky");
+
+
+
+  console.log("scrolled")
+})
+
+
 //// NAVIGATION (NAV-BAR) FUNCTIONS
 const navCont = document.querySelector(".navbar-container");
 const navOverlay = document.querySelector(".navbar-overlay");

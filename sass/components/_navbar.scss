@@ -5,13 +5,9 @@
   justify-content: space-between;
   align-items: center;
   height: 8rem;
-
-  @include respond(phone) {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-  }
+  position: sticky;
+  top: 0;
+z-index: 3;
 
   // NAV LOGO
 
@@ -56,18 +52,17 @@
   &-container {
     @include respond(phone) {
       background: $color-black;
-      height: 80vh;
+      height: 98vh;
       position: fixed;
-      top: 10%;
+      top: 2%;
       right: -100%;
       width: 60%;
       z-index: 5;
       border-radius: 2rem 0 0 2rem;
       box-shadow: -1rem 1rem 1.4rem #0c0c0c65;
-      transition: right .6s cubic-bezier(0.16, 1, 0.3, 1) ;
+      transition: right 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
   }
-
 
   &-list {
     &:not(:last-child):hover {
@@ -79,16 +74,15 @@
     @include normal-font;
     display: flex;
     align-items: center;
-    column-gap: 2.4rem; 
+    column-gap: 2.4rem;
 
-    @include respond(phone) { 
+    @include respond(phone) {
       width: 100%;
       flex-direction: column;
       align-items: flex-start;
       row-gap: 5rem;
       padding-inline: 2rem;
       padding-top: 35%;
-
     }
   }
 
@@ -102,11 +96,9 @@
     height: 4rem;
     margin-right: 2.2rem;
     display: none;
-cursor: pointer;
-   
+    cursor: pointer;
 
     &.close {
-
       @include respond(phone) {
         position: absolute;
         right: -1rem;
@@ -119,33 +111,36 @@ cursor: pointer;
     }
   }
 
-////// NAVBAR OVERLAY
+  ////// NAVBAR OVERLAY
 
+  &-overlay {
+    @include respond(phone) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #c4c4c41f ;
+      backdrop-filter: blur(5px);
+      z-index: 4;
+      visibility: hidden;
+      transition: 0.2s;
+    }
 
-
-&-overlay{
-
-
-  @include respond(phone){
-position: fixed;
-width: 100%;
-height: 100%;
-top: 0;
-left: 0;
-background: #c4c0c01f;
-backdrop-filter: blur(5px);
-z-index: 4;
-visibility: hidden;
-transition: .2s;
   }
-}
 
 }
+/// .... add shadow to na vbar when you scroll up
 
-.visible{
+.sticky{
+  box-shadow: .1rem .5rem 3rem rgba($color-black, .9);
+  transition: .4s;
+} 
+
+.visible {
   visibility: visible;
 }
 
-.slide-in{
-right: 0;
+.slide-in {
+  right: 0;
 }

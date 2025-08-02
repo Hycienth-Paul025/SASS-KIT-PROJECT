@@ -4,8 +4,8 @@ const Navbar = document.querySelector(".navbar");
 
 window.addEventListener("scroll", ()=>{
 
-  window.scrollY >= 64 
-  ? Navbar.classList.add("sticky")
+  window.scrollY >= 64  
+  ? Navbar.classList.add("sticky") 
  :Navbar.classList.remove("sticky");
 
 

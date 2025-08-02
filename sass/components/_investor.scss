@@ -2,7 +2,7 @@
   background: $color-black;
   @include primary-pad;
   overflow: hidden;
-
+  
   &-text {
     @include bg-norm-font;
   }

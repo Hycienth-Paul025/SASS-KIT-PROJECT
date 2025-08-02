@@ -126,17 +126,17 @@ z-index: 3;
       visibility: hidden;
       transition: 0.2s;
     }
-
-  }
-
+ 
+  }   
+ 
 }
 /// .... add shadow to na vbar when you scroll up
 
 .sticky{
   box-shadow: .1rem .5rem 3rem rgba($color-black, .9);
   transition: .4s;
-} 
-
+}  
+  
 .visible {
   visibility: visible;
 }

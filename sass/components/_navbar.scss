@@ -8,6 +8,7 @@
   position: sticky;
   top: 0;
 z-index: 3;
+transition: .4s;
 
   // NAV LOGO
 
@@ -132,9 +133,8 @@ z-index: 3;
 }
 /// .... add shadow to na vbar when you scroll up
 
-.sticky{
+.shadow{ 
   box-shadow: .1rem .5rem 3rem rgba($color-black, .9);
-  transition: .4s;
 }  
   
 .visible {

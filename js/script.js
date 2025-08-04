@@ -1,7 +1,7 @@
 //// NAVBAR ACTIVE LINKS ACCORDING TO ITS SECTIONS
 /* 
 const sections = document.querySelectorAll("section[id]");
-
+ 
 window.addEventListener("scroll", () => {
   const scrollDown = window.scrollY;
 

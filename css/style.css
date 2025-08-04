@@ -590,7 +590,7 @@ body {
   border-bottom: 3px solid #f54235;
 }
 .contact-form-input:focus:invalid {
-  border-bottom: 3px solid #06cc06;
+  border-bottom: 3px solid #29af29;
 }
 .contact-form-input::placeholder {
   font-size: 1.6rem;

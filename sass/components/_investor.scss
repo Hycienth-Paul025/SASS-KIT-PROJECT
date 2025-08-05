@@ -26,11 +26,18 @@
       position: absolute;
       top: 0;
       z-index: 2;
+      
+      @include respond(phone){
+       width: 12rem;
+      }
+
+
     }
 
     &::before {
       background: linear-gradient(to right, $color-black 50%, transparent);
       left: -5%;
+
     }
 
     &::after {

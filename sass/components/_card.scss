@@ -29,7 +29,7 @@
     padding-inline: 11rem;
 
     @include respond(phone){
-       padding-inline: 0;
+       padding-inline: 0; 
     }
 
   }

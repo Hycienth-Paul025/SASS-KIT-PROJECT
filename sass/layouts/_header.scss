@@ -103,6 +103,10 @@ left: -90%;
     @include respond(tab-port) {
       width: 60%;
     }
+
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 
   /* FLoating Image */

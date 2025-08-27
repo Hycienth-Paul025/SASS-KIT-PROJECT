@@ -3,9 +3,11 @@
  background: linear-gradient(180deg, $color-black 0%, $color-secondary 100%);
 
 @include primary-pad-block;
+ padding-inline: 2.5rem;
 
 &-content{
-  padding-inline: 1.6rem;
+  padding-inline: 2rem;
+  background: red;
 }
 
 &-description{
@@ -19,6 +21,11 @@
      @include respond(tab-port-md) {
     width: 49%;
     }
+
+     @include respond(phone) {
+    width: 90%;
+   
+    }
 }
 
 
@@ -31,7 +38,7 @@ width: 105.2rem;
 
 
    @include respond(tab-port-md) {
-      width: 99%;
+      width: 100%;
     }
 
 

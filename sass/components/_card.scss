@@ -1,6 +1,7 @@
 .card {
   background: $color-black;
   @include primary-pad-block;
+   padding-inline: 2.5rem;
 
   &-description {
     @include normal-font;  
@@ -13,15 +14,24 @@
      @include respond(tab-port){
       width: 50%;
     }
+
+     @include respond(phone){
+      width: 100%;
+    }
   }
 
   &-container {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, max-content) );
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr) );
     grid-gap: 1.6rem; 
     padding-top: 6.4rem;
-    padding-inline: 11.2rem;
+    padding-inline: 11rem;
+
+    @include respond(phone){
+       padding-inline: 0;
+    }
+
   }
 
   &-item {
